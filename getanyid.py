@@ -4,10 +4,11 @@ from pyrogram.types import Message
 import os
 
 bot = Client(
-"Night Vission",
-api_id = 16884543,
-api_hash = "cc4535cefe1fa2e167d75a5e2ac24246",
-bot_token = "5595279208:AAFH1UbljDXD6pVwC8UnM0K7QTOPWmGlMaM")
+    "Night Vission",
+    api_id = int(os.environ["API_ID"]),
+    api_hash = os.environ["API_HASH"],
+    bot_token = os.environ["BOT_TOKEN"]
+)
 
 START_MESSAGE = "Heya im Test Bot"
 START_MESSAGE_BUTTONS = [
