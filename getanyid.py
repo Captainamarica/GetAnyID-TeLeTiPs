@@ -5,10 +5,9 @@ import os
 
 bot = Client(
 "Night Vission",
-    api_id = int(os.environ["API_ID"]),
-    api_hash = os.environ["API_HASH"],
-    bot_token = os.environ["BOT_TOKEN"]
-)
+api_id = 16884543,
+api_hash = "cc4535cefe1fa2e167d75a5e2ac24246",
+bot_token = "5595279208:AAFH1UbljDXD6pVwC8UnM0K7QTOPWmGlMaM")
 
 START_MESSAGE = "Heya im Test Bot"
 START_MESSAGE_BUTTONS = [
@@ -16,14 +15,14 @@ START_MESSAGE_BUTTONS = [
 ]
 
 @bot.on_message(filters.command('start') & filters.private)
-def start(bot, message):
-	text = START_MESSAGE
-	reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
-Message.reply(
-	text=text,
-	reply_markup=reply_markup,
-	disable_web_page_preview=True
-)
+async def start(client, message):
+    text = START_MESSAGE
+    reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
+    await message.reply(
+        text=text,
+        reply_markup=reply_markup,
+        disable_web_page_preview=True
+    )
 	
-print("he")
+print("Night Vission Test Bot Alive Chek It Now </>")
 bot.run()
