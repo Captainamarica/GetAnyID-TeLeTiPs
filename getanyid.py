@@ -19,7 +19,7 @@ START_MESSAGE_BUTTONS = [
 def start(bot, message):
 	text = START_MESSAGE
 	reply_markup = InlineKeyboardMarkup(START_MESSAGE_BUTTONS)
-message.reply(
+Message.reply(
 	text=text,
 	reply_markup=reply_markup,
 	disable_web_page_preview=True
